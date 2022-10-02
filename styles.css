@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--fondo: #333;
+}
+
+body{
+	overflow: hidden;
+}
+
+main{
+	background-color: var(--fondo);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+#rueda{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
+	width: 400px;
+	border-radius: 100%;
+	border: 40px solid #000;
+	cursor: pointer;
+	animation-name: girar;
+	animation-duration: 0;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.aspas{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	border: 10px solid #ddd;
+}
+
+.aspa{
+	height: 300px;
+	width: 10px;
+	background-color: #ddd;
+	position: absolute;
+}
+
+.aspa-2{
+	transform: rotate(45deg);
+}
+
+.aspa-3{
+	transform: rotate(90deg);
+}
+
+.aspa-4{
+	transform: rotate(135deg);
+}
+
+.tapa{
+	background-color: #ddd;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	position: absolute;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .75);
+}
+
+@keyframes girar{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
